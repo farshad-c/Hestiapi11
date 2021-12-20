@@ -1,0 +1,14 @@
+    valid_psk = True
+    checkwpa = False
+
+#    while checkwpa:
+#        with open(wpalog, 'r') as f:
+#            content = f.read()
+#            if success in content:
+#                valid_psk = True
+#                checkwpa = False
+#            elif fail in content:
+#                valid_psk = False
+#                checkwpa = False
+#            else:
+#                continue
