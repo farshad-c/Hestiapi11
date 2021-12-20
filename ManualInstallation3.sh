@@ -72,7 +72,7 @@ sudo sed -i 's/type="email"/type="hidden"/g' /home/pi/scripts/raspberry-pi-turnk
 
 #Hide a Jessie bug of turnkey
 sed '/while checkwpa:/,/^\s*$/d' /home/pi/scripts/raspberry-pi-turnkey/startup.py | sudo tee /home/pi/scripts/raspberry-pi-turnkey/startup.py;
-sudo cp ~/manual/test/replace.txt /home/pi/scripts/raspberry-pi-turnkey;
+sudo cp ~/manual/hestiapi11/replace.txt /home/pi/scripts/raspberry-pi-turnkey;
 sudo sed -i '/checkwpa = True/r replace.txt' /home/pi/scripts/raspberry-pi-turnkey/startup.py;
 sudo rm /home/pi/scripts/raspberry-pi-turnkey/replace.txt;
 
