@@ -8,9 +8,17 @@ openhab ALL=(ALL) NOPASSWD: ALL' | sudo tee --append /etc/sudoers;
 sudo sed -i 's/HISTCONTROL=ignoreboth/HISTCONTROL=ignoredups/' ~/.bashrc;   #This command is used to prevent the storage of repetitive commands that we use frequently and consecutively. ie, it will store one command at once instead of multiple times when we use it consecutively
 
 #installing the required packages
+#sudo apt-get install -y --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox;
+#sudo apt-get install -y apt-transport-https bc dnsmasq hostapd vim python3-flask python3-requests dirmngr accountsservice build-essential python quilt devscripts python-setuptools python3 libssl-dev cmake libc-ares-dev uuid-dev daemon zip zlibc zlib1g zlib1g-dev python3-smbus unclutter matchbox-window-manager xwit xinit lxterminal geoclue-2.0 lightdm
 cd \
-sudo apt-get install -y apt-transport-https bc dnsmasq hostapd vim python3-flask python3-requests dirmngr accountsservice build-essential python quilt devscripts python-setuptools python3 libssl-dev cmake libc-ares-dev uuid-dev daemon zip zlibc zlib1g zlib1g-dev python3-smbus unclutter matchbox-window-manager xwit xinit lxterminal geoclue-2.0 lightdm;
-sudo apt-get install -y --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox;
+sudo apt-get install -y apt-transport-https bc dnsmasq hostapd vim python3-flask;
+sudo apt-get install -y python3-requests dirmngr accountsservice build-essential python quilt;
+sudo apt-get install -y devscripts python-setuptools python3 libssl-dev cmake libc-ares-dev;
+sudo apt-get install -y uuid-dev daemon zip zlibc zlib1g zlib1g-dev python3-smbus unclutter;
+sudo apt-get install -y matchbox-window-manager xwit xinit;
+sudo apt-get install -y lxterminal geoclue-2.0;
+sudo apt-get install -y --no-install-recommends xserver-xorg;
+sudo apt-get install -y --no-install-recommends x11-xserver-utils xinit openbox;
 
 #Create a file .xinitrc
 touch /home/pi/.xinitrc \
